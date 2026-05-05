@@ -68,8 +68,8 @@ const SKILLS = {
 
 const EXPERIENCE = [
   {
-    company: 'o9 Solutions',
-    role: 'Software Engineer — Full Stack',
+    company: 'Sansung Data Systems(SDS)',
+    role: 'Software Engineer 2 — Full Stack',
     period: '2022 – Present · Gurugram, India',
     color: 'var(--accent)',
     bullets: [
@@ -80,9 +80,9 @@ const EXPERIENCE = [
     ],
   },
   {
-    company: 'Samsung Data Systems India',
+    company: 'Leaf Craft Pvt. India',
     role: 'Full Stack Developer',
-    period: '2021 – 2022 · Noida, India',
+    period: '2021 – 2022 · Hyderabad, India',
     color: 'var(--accent3)',
     bullets: [
       'Developed internal tools using React.js and Python/Django backend',
