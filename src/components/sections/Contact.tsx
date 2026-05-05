@@ -58,21 +58,28 @@ export default function Contact() {
 
           {/* Resume download */}
           <div className="card" style={{ padding: '2rem', textAlign: 'center' }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Download Resume</h3>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text2)', marginBottom: '1.5rem', lineHeight: 1.65 }}>
-              PDF resume — updated May 2025. Includes full experience, projects, and references.
-            </p>
-            <a
-              href="/SahilResume.pdf"
-              download="Sahil_Singh_Resume.pdf"
-              className="btn-primary"
-              style={{ width: '100%', justifyContent: 'center', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
-              onClick={() => trackEvent('resume_download')}
-              
-            >
-              ↓ Download Resume (PDF)
-            </a>
-          </div>
+  <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Download Resume</h3>
+  <p style={{ fontSize: '0.85rem', color: 'var(--text2)', marginBottom: '1.5rem', lineHeight: 1.65 }}>
+    PDF resume — updated May 2025. Includes full experience, projects, and references.
+  </p>
+  <a
+    href="/SahilResume.pdf"
+    download="Sahil_Singh_Resume.pdf"
+    className="btn-primary"
+    style={{ 
+      width: '100%', 
+      justifyContent: 'center', 
+      textDecoration: 'none', 
+      display: 'flex', 
+      alignItems: 'center', 
+      gap: '0.5rem',
+      boxSizing: 'border-box',
+    }}
+    onClick={() => trackEvent('resume_download')}
+  >
+    ↓ Download Resume (PDF)
+  </a>
+</div>
         </div>
 
         {/* Right — JD Analyzer */}
