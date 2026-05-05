@@ -38,9 +38,9 @@ export default function Contact() {
         <div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
             {[
-              { icon: '@', bg: 'rgba(108,99,255,0.12)', color: 'var(--accent2)', label: 'Email', val: 'sahil.singh@email.com', href: 'mailto:sahil.singh@email.com' },
-              { icon: '⌂', bg: 'rgba(56,189,248,0.12)', color: 'var(--accent3)', label: 'GitHub', val: 'github.com/sahilsingh', href: 'https://github.com/sahilsingh' },
-              { icon: 'in', bg: 'rgba(52,211,153,0.12)', color: 'var(--green)', label: 'LinkedIn', val: 'linkedin.com/in/sahilsingh', href: 'https://linkedin.com/in/sahilsingh' },
+              { icon: '@', bg: 'rgba(108,99,255,0.12)', color: 'var(--accent2)', label: 'Email', val: 'sahilsingh2597@gmail.com', href: 'mailto:sahil.singh@email.com' },
+              { icon: '⌂', bg: 'rgba(56,189,248,0.12)', color: 'var(--accent3)', label: 'GitHub', val: 'github.com/sahilsingh21', href: 'https://github.com/sahilsingh21' },
+              { icon: 'in', bg: 'rgba(52,211,153,0.12)', color: 'var(--green)', label: 'LinkedIn', val: 'linkedin.com/in/sahilsingh', href: 'https://linkedin.com/in/sahil-singh-513a6a149' },
             ].map((link) => (
               <a key={link.label} href={link.href} target="_blank" rel="noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 1.25rem', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, textDecoration: 'none', color: 'var(--text)', transition: 'all 0.2s' }}
@@ -62,13 +62,16 @@ export default function Contact() {
             <p style={{ fontSize: '0.85rem', color: 'var(--text2)', marginBottom: '1.5rem', lineHeight: 1.65 }}>
               PDF resume — updated May 2025. Includes full experience, projects, and references.
             </p>
-            <button
+            <a
+              href="/SahilResume.pdf"
+              download="Sahil_Singh_Resume.pdf"
               className="btn-primary"
-              style={{ width: '100%', justifyContent: 'center' }}
+              style={{ width: '100%', justifyContent: 'center', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
               onClick={() => trackEvent('resume_download')}
+              
             >
               ↓ Download Resume (PDF)
-            </button>
+            </a>
           </div>
         </div>
 
