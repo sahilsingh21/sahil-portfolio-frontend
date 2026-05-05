@@ -16,8 +16,8 @@ export default function Hero({ onChatOpen, onDemoStart }: HeroProps) {
       style={{
         minHeight: 'calc(100vh - 56px)',
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '4rem',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: '3rem',
         alignItems: 'center',
         padding: '4rem 3rem',
         position: 'relative',

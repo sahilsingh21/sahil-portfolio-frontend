@@ -113,7 +113,7 @@ export function SkillsExperience() {
       <h2 className="section-title">Technical <em>depth</em></h2>
       <p style={{ color: 'var(--text2)', maxWidth: '60ch', lineHeight: 1.7, marginBottom: '3rem' }}>Hands-on across the full stack, with real production experience.</p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'start' }}>
         <div>
           {Object.entries(SKILLS).map(([group, skills]) => (
             <div key={group} style={{ marginBottom: '2rem' }}>

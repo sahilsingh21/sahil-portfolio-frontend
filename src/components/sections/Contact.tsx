@@ -33,12 +33,18 @@ export default function Contact() {
         Open to full-time roles, contract work, and interesting conversations.
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+      {/* ✅ Auto-stacks to 1 column on mobile */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gap: '2rem',
+        alignItems: 'start',
+      }}>
         {/* Left — contact links */}
         <div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
             {[
-              { icon: '@', bg: 'rgba(108,99,255,0.12)', color: 'var(--accent2)', label: 'Email', val: 'sahilsingh2597@gmail.com', href: 'mailto:sahil.singh@email.com' },
+              { icon: '@', bg: 'rgba(108,99,255,0.12)', color: 'var(--accent2)', label: 'Email', val: 'sahilsingh2597@gmail.com', href: 'mailto:sahilsingh2597@gmail.com' },
               { icon: '⌂', bg: 'rgba(56,189,248,0.12)', color: 'var(--accent3)', label: 'GitHub', val: 'github.com/sahilsingh21', href: 'https://github.com/sahilsingh21' },
               { icon: 'in', bg: 'rgba(52,211,153,0.12)', color: 'var(--green)', label: 'LinkedIn', val: 'linkedin.com/in/sahilsingh', href: 'https://linkedin.com/in/sahil-singh-513a6a149' },
             ].map((link) => (
@@ -58,28 +64,34 @@ export default function Contact() {
 
           {/* Resume download */}
           <div className="card" style={{ padding: '2rem', textAlign: 'center' }}>
-  <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Download Resume</h3>
-  <p style={{ fontSize: '0.85rem', color: 'var(--text2)', marginBottom: '1.5rem', lineHeight: 1.65 }}>
-    PDF resume — updated May 2025. Includes full experience, projects, and references.
-  </p>
-  <a
-    href="/SahilResume.pdf"
-    download="Sahil_Singh_Resume.pdf"
-    className="btn-primary"
-    style={{ 
-      width: '100%', 
-      justifyContent: 'center', 
-      textDecoration: 'none', 
-      display: 'flex', 
-      alignItems: 'center', 
-      gap: '0.5rem',
-      boxSizing: 'border-box',
-    }}
-    onClick={() => trackEvent('resume_download')}
-  >
-    ↓ Download Resume (PDF)
-  </a>
-</div>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>Download Resume</h3>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text2)', marginBottom: '1.5rem', lineHeight: 1.65 }}>
+              PDF resume — updated May 2025. Includes full experience, projects, and references.
+            </p>
+            <a
+              href="/SahilResume.pdf"
+              download="Sahil_Singh_Resume.pdf"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                width: '100%',
+                background: 'var(--accent)',
+                color: '#fff',
+                padding: '0.75rem 1.75rem',
+                borderRadius: '12px',
+                fontWeight: 600,
+                fontSize: '0.9rem',
+                textDecoration: 'none',
+                boxSizing: 'border-box',
+                transition: 'all 0.2s',
+              }}
+              onClick={() => trackEvent('resume_download')}
+            >
+              ↓ Download Resume (PDF)
+            </a>
+          </div>
         </div>
 
         {/* Right — JD Analyzer */}
@@ -95,9 +107,18 @@ export default function Contact() {
             placeholder="Paste job description here..."
             rows={5}
             style={{
-              width: '100%', background: 'var(--bg3)', border: '1px solid var(--border)', borderRadius: 8,
-              padding: '0.9rem', color: 'var(--text)', fontFamily: 'inherit', fontSize: '0.83rem',
-              resize: 'vertical', outline: 'none', transition: 'border-color 0.2s',
+              width: '100%',
+              background: 'var(--bg3)',
+              border: '1px solid var(--border)',
+              borderRadius: 8,
+              padding: '0.9rem',
+              color: 'var(--text)',
+              fontFamily: 'inherit',
+              fontSize: '0.83rem',
+              resize: 'vertical',
+              outline: 'none',
+              transition: 'border-color 0.2s',
+              boxSizing: 'border-box',
             }}
             onFocus={(e) => (e.target.style.borderColor = 'var(--accent)')}
             onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
@@ -106,10 +127,27 @@ export default function Contact() {
           {error && <div style={{ color: 'var(--coral)', fontSize: '0.8rem', marginTop: '0.5rem' }}>{error}</div>}
 
           <button
-            className="btn-primary"
             onClick={handleAnalyze}
             disabled={analyzing}
-            style={{ width: '100%', marginTop: '0.75rem', justifyContent: 'center', opacity: analyzing ? 0.7 : 1 }}
+            style={{
+              width: '100%',
+              marginTop: '0.75rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'var(--accent)',
+              color: '#fff',
+              padding: '0.75rem 1.75rem',
+              borderRadius: '12px',
+              fontWeight: 600,
+              fontSize: '0.9rem',
+              border: 'none',
+              cursor: analyzing ? 'not-allowed' : 'pointer',
+              opacity: analyzing ? 0.7 : 1,
+              boxSizing: 'border-box',
+              fontFamily: 'inherit',
+              transition: 'all 0.2s',
+            }}
           >
             {analyzing ? 'Analyzing...' : 'Analyze Match →'}
           </button>
@@ -143,7 +181,13 @@ export default function Contact() {
         </div>
       </div>
 
-      <style>{`@media(max-width:900px){#contact{padding:3rem 1.5rem!important} #contact > div + div > div:last-child > div{grid-template-columns:1fr!important}}`}</style>
+      <style>{`
+        @media (max-width: 768px) {
+          #contact {
+            padding: 3rem 1.5rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
