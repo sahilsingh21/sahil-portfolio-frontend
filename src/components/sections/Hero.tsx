@@ -51,9 +51,9 @@ export default function Hero({ onChatOpen, onDemoStart }: HeroProps) {
         </h1>
 
         <p style={{ fontSize: '1.05rem', color: 'var(--text2)', maxWidth: '42ch', lineHeight: 1.7, marginBottom: '2rem' }}>
-          Full Stack Engineer with 3+ years crafting high-performance products at{' '}
-          <strong style={{ color: 'var(--text)' }}>o9 Solutions</strong> &{' '}
-          <strong style={{ color: 'var(--text)' }}>Samsung Data Systems</strong>.
+          Full Stack Engineer with 4+ years crafting high-performance products at{' '}
+          <strong style={{ color: 'var(--text)' }}>Samsung Data Systems</strong> &{' '}
+          <strong style={{ color: 'var(--text)' }}>Leaf Craft</strong>.
           MERN · Python · GraphQL · System Design.
         </p>
 
@@ -64,7 +64,7 @@ export default function Hero({ onChatOpen, onDemoStart }: HeroProps) {
 
         {/* Stats */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '2.5rem' }}>
-          {[['3+', 'Years Exp'], ['12+', 'Projects'], ['500+', 'Commits']].map(([num, label]) => (
+          {[['4+', 'Years Exp'], ['12+', 'Projects'], ['500+', 'Commits']].map(([num, label]) => (
             <div key={label} className="card" style={{ padding: '1rem', textAlign: 'center' }}>
               <div className="gradient-text" style={{ fontSize: '1.6rem', fontWeight: 800 }}>{num}</div>
               <div style={{ fontSize: '0.72rem', color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '0.15rem' }}>{label}</div>
