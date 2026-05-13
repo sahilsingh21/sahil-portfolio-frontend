@@ -46,7 +46,7 @@ export default function Contact() {
             {[
               { icon: '@', bg: 'rgba(108,99,255,0.12)', color: 'var(--accent2)', label: 'Email', val: 'sahilsingh2597@gmail.com', href: 'mailto:sahilsingh2597@gmail.com' },
               { icon: '⌂', bg: 'rgba(56,189,248,0.12)', color: 'var(--accent3)', label: 'GitHub', val: 'github.com/sahilsingh21', href: 'https://github.com/sahilsingh21' },
-              { icon: 'in', bg: 'rgba(52,211,153,0.12)', color: 'var(--green)', label: 'LinkedIn', val: 'linkedin.com/in/sahilsingh', href: 'https://linkedin.com/in/sahil-singh-513a6a149' },
+              { icon: 'in', bg: 'rgba(52,211,153,0.12)', color: 'var(--green)', label: 'LinkedIn', val: 'linkedin.com/in/sahil-singh-513a6a149', href: 'https://linkedin.com/in/sahil-singh-513a6a149' },
             ].map((link) => (
               <a key={link.label} href={link.href} target="_blank" rel="noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 1.25rem', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 12, textDecoration: 'none', color: 'var(--text)', transition: 'all 0.2s' }}
